@@ -4,6 +4,7 @@ import Banner from "./components/banner/banner";
 import Header from "./components/header/Header";
 import Recipe from "./components/recipe/Recipe";
 import RecipeList from "./components/recipe/RecipeList";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const [recipeList, setRecipeList] = useState([]);
@@ -16,12 +17,13 @@ function App() {
     if (!isExist) {
       setRecipeList([...recipeList, recipe]);
     } else {
-      alert("already in cart");
+      toast.error("Already exists");
     }
   };
 
   return (
     <>
+      <Toaster />
       <Header></Header>
 
       <Banner></Banner>
