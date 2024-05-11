@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/banner";
 import Header from "./components/header/Header";
@@ -5,6 +6,12 @@ import Recipe from "./components/recipe/Recipe";
 import RecipeList from "./components/recipe/RecipeList";
 
 function App() {
+  const [recipeList, setRecipeList] = useState([]);
+
+  const addToRecipeList = (recipe) => {
+    console.log("added to recipe list");
+  };
+
   return (
     <>
       <Header></Header>
@@ -20,7 +27,7 @@ function App() {
           </p>
         </div>
         <div className="flex justify-between lg:flex-row flex-col">
-          <Recipe></Recipe>
+          <Recipe addToRecipeList={addToRecipeList}></Recipe>
           <RecipeList></RecipeList>
         </div>
       </div>

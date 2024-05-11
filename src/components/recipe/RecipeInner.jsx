@@ -1,7 +1,7 @@
 import { CiAlarmOn } from "react-icons/ci";
 import { FaFireFlameCurved } from "react-icons/fa6";
 
-const RecipeInner = ({ recipe }) => {
+const RecipeInner = ({ recipe, addToRecipeList }) => {
   const {
     recipe_name,
     recipe_image,
@@ -41,7 +41,9 @@ const RecipeInner = ({ recipe }) => {
             </div>
           </div>
           <div className=" flex w-full ">
-            <button className="btn btn-accent">Want to Cook</button>
+            <button className="btn btn-accent" onClick={addToRecipeList}>
+              Want to Cook
+            </button>
           </div>
         </div>
       </div>
