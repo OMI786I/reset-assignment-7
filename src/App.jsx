@@ -50,7 +50,7 @@ function App() {
               recipeList={recipeList}
               wantToCookFunc={wantToCookFunc}
             ></RecipeList>
-            <WantToCookComp></WantToCookComp>
+            <WantToCookComp wantToCook={wantToCook}></WantToCookComp>
           </div>
         </div>
       </div>

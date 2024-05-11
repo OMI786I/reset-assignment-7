@@ -1,4 +1,6 @@
-const WantToCookComp = () => {
+import WantToCookInner from "./WantToCookInner";
+
+const WantToCookComp = ({ wantToCook }) => {
   return (
     <div>
       <div>
@@ -18,6 +20,10 @@ const WantToCookComp = () => {
               </tr>
             </thead>
           </table>
+
+          {wantToCook.map((list) => (
+            <WantToCookInner key={list.recipe_id} list={list}></WantToCookInner>
+          ))}
         </div>
       </div>
     </div>
