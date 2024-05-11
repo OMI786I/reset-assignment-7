@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Recipe from "./components/recipe/Recipe";
 import RecipeList from "./components/recipe/RecipeList";
 import toast, { Toaster } from "react-hot-toast";
+import WantToCook from "./components/recipe/WantToCook";
 
 function App() {
   const [recipeList, setRecipeList] = useState([]);
@@ -38,7 +39,10 @@ function App() {
         </div>
         <div className="flex justify-between lg:flex-row flex-col">
           <Recipe addToRecipeList={addToRecipeList}></Recipe>
-          <RecipeList recipeList={recipeList}></RecipeList>
+          <div>
+            <RecipeList recipeList={recipeList}></RecipeList>
+            <WantToCook></WantToCook>
+          </div>
         </div>
       </div>
     </>

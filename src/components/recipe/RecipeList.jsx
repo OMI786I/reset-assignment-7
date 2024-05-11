@@ -7,7 +7,7 @@ const RecipeList = ({ recipeList }) => {
     <div>
       <div className="p-4">
         <h1 className="text-2xl font-bold">
-          Want to cook :{recipeList.length}
+          Want to cook : {recipeList.length}
         </h1>
       </div>
       <hr></hr>
