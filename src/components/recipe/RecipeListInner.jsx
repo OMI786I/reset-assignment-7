@@ -12,7 +12,9 @@ const RecipeListInner = ({ list, index }) => {
               <td>{preparing_time}</td>
               <td>{calories}</td>
 
-              <button className="btn btn-accent btn-sm">Preparing</button>
+              <button className="btn btn-accent btn-xs md:btn-sm">
+                Preparing
+              </button>
             </tr>
           </tbody>
         </table>
