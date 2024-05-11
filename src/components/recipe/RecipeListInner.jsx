@@ -1,4 +1,4 @@
-const RecipeListInner = ({ list }) => {
+const RecipeListInner = ({ list, index }) => {
   const { recipe_name, preparing_time, calories } = list;
 
   return (
@@ -7,10 +7,11 @@ const RecipeListInner = ({ list }) => {
         <table className="table">
           <tbody>
             <tr>
-              <th>1</th>
+              <th>{index}</th>
               <td>{recipe_name}</td>
               <td>{preparing_time}</td>
               <td>{calories}</td>
+              <button className="btn btn-accent btn-sm">Preparing</button>
             </tr>
           </tbody>
         </table>

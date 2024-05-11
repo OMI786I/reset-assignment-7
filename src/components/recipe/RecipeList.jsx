@@ -2,6 +2,7 @@ import RecipeListInner from "./RecipeListInner";
 
 const RecipeList = ({ recipeList }) => {
   console.log(recipeList);
+  let index = 1;
   return (
     <div>
       <div className="p-4">
@@ -24,7 +25,11 @@ const RecipeList = ({ recipeList }) => {
         </table>
 
         {recipeList.map((list) => (
-          <RecipeListInner key={list.recipe_id} list={list}></RecipeListInner>
+          <RecipeListInner
+            key={list.recipe_id}
+            list={list}
+            index={index++}
+          ></RecipeListInner>
         ))}
       </div>
     </div>
