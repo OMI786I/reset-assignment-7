@@ -9,8 +9,19 @@ function App() {
       <Header></Header>
 
       <Banner></Banner>
-
-      <Recipe></Recipe>
+      <div className="mt-10">
+        <div className="flex flex-col ">
+          <h1 className="text-3xl font-bold text-center">Our Recipes</h1>
+          <p className="text-center md:mt-5">
+            You can select one of our recipes from below and you will get all
+            the calories and time and also choose whether you want to cook or
+            not
+          </p>
+        </div>
+        <div>
+          <Recipe></Recipe>
+        </div>
+      </div>
     </>
   );
 }
