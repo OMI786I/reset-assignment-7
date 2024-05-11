@@ -1,5 +1,5 @@
 const RecipeListInner = ({ list, index }) => {
-  const { recipe_name, preparing_time, calories } = list;
+  const { recipe_name, preparing_time, calories, recipe_id } = list;
 
   return (
     <div>
@@ -11,6 +11,7 @@ const RecipeListInner = ({ list, index }) => {
               <td>{recipe_name}</td>
               <td>{preparing_time}</td>
               <td>{calories}</td>
+
               <button className="btn btn-accent btn-sm">Preparing</button>
             </tr>
           </tbody>

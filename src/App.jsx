@@ -9,8 +9,15 @@ function App() {
   const [recipeList, setRecipeList] = useState([]);
 
   const addToRecipeList = (recipe) => {
-    const newRecipeList = [...recipeList, recipe];
-    setRecipeList(newRecipeList);
+    const isExist = recipeList.find(
+      (reciped) => reciped.recipe_id == recipe.recipe_id
+    );
+
+    if (!isExist) {
+      setRecipeList([...recipeList, recipe]);
+    } else {
+      alert("already in cart");
+    }
   };
 
   return (
