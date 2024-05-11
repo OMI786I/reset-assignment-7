@@ -19,7 +19,7 @@ function App() {
             not
           </p>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between lg:flex-row flex-col">
           <Recipe></Recipe>
           <RecipeList></RecipeList>
         </div>

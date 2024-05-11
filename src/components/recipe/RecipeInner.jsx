@@ -12,9 +12,13 @@ const RecipeInner = ({ recipe }) => {
   } = recipe;
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-auto md:w-80 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
-          <img src={recipe_image} alt="Shoes" className="rounded-xl" />
+          <img
+            src={recipe_image}
+            alt="Shoes"
+            className="rounded-xl w-60 h-48"
+          />
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">{recipe_name}</h2>
@@ -36,7 +40,7 @@ const RecipeInner = ({ recipe }) => {
               {calories}
             </div>
           </div>
-          <div className="card-actions">
+          <div className=" flex w-full ">
             <button className="btn btn-accent">Want to Cook</button>
           </div>
         </div>

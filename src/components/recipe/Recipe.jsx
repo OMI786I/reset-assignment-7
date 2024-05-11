@@ -9,7 +9,7 @@ const Recipe = () => {
       .then((data) => setRecipes(data));
   });
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {recipes.map((recipe) => (
         <RecipeInner key={recipe.recipe_id} recipe={recipe}></RecipeInner>
       ))}
