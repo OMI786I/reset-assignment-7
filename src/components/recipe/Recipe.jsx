@@ -5,9 +5,9 @@ const Recipe = () => {
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setRecipes(data));
   });
-  return <div>This is recipe</div>;
+  return <div>{recipes.length}</div>;
 };
 
 export default Recipe;

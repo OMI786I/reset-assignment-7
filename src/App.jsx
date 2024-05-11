@@ -2,6 +2,7 @@ import "./App.css";
 import Banner from "./components/banner/banner";
 import Header from "./components/header/Header";
 import Recipe from "./components/recipe/Recipe";
+import RecipeList from "./components/recipe/RecipeList";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
             not
           </p>
         </div>
-        <div>
+        <div className="flex justify-between">
           <Recipe></Recipe>
+          <RecipeList></RecipeList>
         </div>
       </div>
     </>
