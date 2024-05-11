@@ -41,7 +41,10 @@ const RecipeInner = ({ recipe, addToRecipeList }) => {
             </div>
           </div>
           <div className=" flex w-full ">
-            <button className="btn btn-accent" onClick={addToRecipeList}>
+            <button
+              className="btn btn-accent"
+              onClick={() => addToRecipeList(recipe)}
+            >
               Want to Cook
             </button>
           </div>

@@ -9,7 +9,8 @@ function App() {
   const [recipeList, setRecipeList] = useState([]);
 
   const addToRecipeList = (recipe) => {
-    console.log("added to recipe list");
+    const newRecipeList = [...recipeList, recipe];
+    setRecipeList(newRecipeList);
   };
 
   return (
@@ -28,7 +29,7 @@ function App() {
         </div>
         <div className="flex justify-between lg:flex-row flex-col">
           <Recipe addToRecipeList={addToRecipeList}></Recipe>
-          <RecipeList></RecipeList>
+          <RecipeList recipeList={recipeList}></RecipeList>
         </div>
       </div>
     </>

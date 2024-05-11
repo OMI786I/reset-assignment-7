@@ -1,8 +1,12 @@
-const RecipeList = () => {
+const RecipeList = ({ recipeList }) => {
+  console.log(recipeList);
   return (
     <div>
       <div className="p-4">
-        <h1 className="text-2xl font-bold"> Want to cook : </h1>
+        <h1 className="text-2xl font-bold">
+          {" "}
+          Want to cook :{recipeList.length}{" "}
+        </h1>
       </div>
       <hr></hr>
       <div></div>
