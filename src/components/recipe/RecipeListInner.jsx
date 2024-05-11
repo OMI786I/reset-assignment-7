@@ -1,4 +1,4 @@
-const RecipeListInner = ({ list, index }) => {
+const RecipeListInner = ({ list, index, wantToCookFunc }) => {
   const { recipe_name, preparing_time, calories, recipe_id } = list;
 
   return (
@@ -12,7 +12,10 @@ const RecipeListInner = ({ list, index }) => {
               <td>{preparing_time}</td>
               <td>{calories}</td>
 
-              <button className="btn btn-accent btn-xs md:btn-sm">
+              <button
+                className="btn btn-accent btn-xs md:btn-sm"
+                onClick={() => wantToCookFunc(list)}
+              >
                 Preparing
               </button>
             </tr>

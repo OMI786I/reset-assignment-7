@@ -5,11 +5,12 @@ import Header from "./components/header/Header";
 import Recipe from "./components/recipe/Recipe";
 import RecipeList from "./components/recipe/RecipeList";
 import toast, { Toaster } from "react-hot-toast";
-import WantToCook from "./components/recipe/WantToCook";
+
+import WantToCookComp from "./components/recipe/WantToCookComp";
 
 function App() {
   const [recipeList, setRecipeList] = useState([]);
-
+  const [wantToCook, setWantToCook] = useState([]);
   const addToRecipeList = (recipe) => {
     const isExist = recipeList.find(
       (reciped) => reciped.recipe_id == recipe.recipe_id
@@ -22,6 +23,11 @@ function App() {
     }
   };
 
+  const wantToCookFunc = (recipe) => {
+    const WantToCookList = [...wantToCook, recipe];
+    setWantToCook(WantToCookList);
+  };
+  console.log(wantToCook);
   return (
     <>
       <Toaster />
@@ -40,8 +46,11 @@ function App() {
         <div className="flex justify-between lg:flex-row flex-col">
           <Recipe addToRecipeList={addToRecipeList}></Recipe>
           <div>
-            <RecipeList recipeList={recipeList}></RecipeList>
-            <WantToCook></WantToCook>
+            <RecipeList
+              recipeList={recipeList}
+              wantToCookFunc={wantToCookFunc}
+            ></RecipeList>
+            <WantToCookComp></WantToCookComp>
           </div>
         </div>
       </div>

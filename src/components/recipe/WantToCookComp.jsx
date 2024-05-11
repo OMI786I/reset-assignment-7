@@ -1,4 +1,4 @@
-const WantToCook = () => {
+const WantToCookComp = () => {
   return (
     <div>
       <div>
@@ -24,4 +24,4 @@ const WantToCook = () => {
   );
 };
 
-export default WantToCook;
+export default WantToCookComp;
