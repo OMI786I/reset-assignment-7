@@ -12,7 +12,7 @@ function App() {
   const [recipeList, setRecipeList] = useState([]);
   const [wantToCook, setWantToCook] = useState([]);
   const [id, setId] = useState(0);
-  const addToRecipeList = (recipe, id) => {
+  const addToRecipeList = (recipe) => {
     const isExist = recipeList.find(
       (reciped) => reciped.recipe_id == recipe.recipe_id
     );
@@ -22,16 +22,16 @@ function App() {
     } else {
       toast.error("Already exists");
     }
-    console.log(id);
   };
 
   const wantToCookFunc = (recipe, id) => {
     const WantToCookList = [...wantToCook, recipe];
     setWantToCook(WantToCookList);
     setId(id);
+    const remainingList = recipeList.filter((list) => list.recipe_id !== id);
+    setRecipeList(remainingList);
   };
   console.log(wantToCook);
-  console.log(id);
 
   return (
     <>
