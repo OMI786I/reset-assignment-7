@@ -12,7 +12,7 @@ const RecipeInner = ({ recipe, addToRecipeList }) => {
   } = recipe;
   return (
     <div>
-      <div className="card w-auto md:w-80 bg-base-100 shadow-xl">
+      <div className="card w-auto lg:w-60 xl:w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
           <img
             src={recipe_image}
@@ -33,11 +33,11 @@ const RecipeInner = ({ recipe, addToRecipeList }) => {
           </ul>
           <div className="flex gap-3">
             <div className="flex items-center gap-1">
-              <CiAlarmOn /> {preparing_time}
+              <CiAlarmOn /> {preparing_time} minute
             </div>
             <div className="flex items-center gap-1">
               <FaFireFlameCurved />
-              {calories}
+              {calories} calories
             </div>
           </div>
           <div className=" flex w-full ">

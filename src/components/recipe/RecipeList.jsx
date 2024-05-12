@@ -1,6 +1,6 @@
 import RecipeListInner from "./RecipeListInner";
 
-const RecipeList = ({ recipeList, wantToCookFunc, addToRecipeList }) => {
+const RecipeList = ({ recipeList, wantToCookFunc }) => {
   let index = 1;
 
   return (
@@ -22,17 +22,17 @@ const RecipeList = ({ recipeList, wantToCookFunc, addToRecipeList }) => {
               <th>Calories</th>
             </tr>
           </thead>
+          <tbody>
+            {recipeList.map((list) => (
+              <RecipeListInner
+                key={list.recipe_id}
+                list={list}
+                index={index++}
+                wantToCookFunc={wantToCookFunc}
+              ></RecipeListInner>
+            ))}
+          </tbody>
         </table>
-
-        {recipeList.map((list) => (
-          <RecipeListInner
-            key={list.recipe_id}
-            list={list}
-            index={index++}
-            wantToCookFunc={wantToCookFunc}
-            addToRecipeList={addToRecipeList}
-          ></RecipeListInner>
-        ))}
       </div>
     </div>
   );

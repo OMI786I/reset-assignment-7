@@ -22,15 +22,16 @@ const WantToCookComp = ({ wantToCook }) => {
                 <th>Calories</th>
               </tr>
             </thead>
+            <tbody>
+              {wantToCook.map((list) => (
+                <WantToCookInner
+                  key={list.recipe_id}
+                  list={list}
+                  index={index++}
+                ></WantToCookInner>
+              ))}
+            </tbody>
           </table>
-
-          {wantToCook.map((list) => (
-            <WantToCookInner
-              key={list.recipe_id}
-              list={list}
-              index={index++}
-            ></WantToCookInner>
-          ))}
         </div>
       </div>
     </div>
