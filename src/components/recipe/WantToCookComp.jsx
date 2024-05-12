@@ -7,7 +7,7 @@ const WantToCookComp = ({ wantToCook }) => {
       <div>
         <div className="p-4">
           <h1 className="text-2xl font-bold">
-            Want to cook : {wantToCook.length}
+            Currently Cooking : {wantToCook.length}
           </h1>
         </div>
         <hr></hr>

@@ -11,8 +11,8 @@
       "Salt",
       "Black pepper"
     ],
-    "preparing_time": "20 min",
-    "calories": "450 calories",
+    "preparing_time": 20,
+    "calories": 450,
     "recipe_image": "https://i.ibb.co/CJftZXC/zoran-borojevic-5-FECW242og-unsplash.jpg"
   },
   {
@@ -28,8 +28,8 @@
       "50ml soy sauce",
       "30ml oyster sauce"
     ],
-    "preparing_time": "25 min",
-    "calories": "320 calories",
+    "preparing_time": 25,
+    "calories": 320,
     "recipe_image": "https://i.ibb.co/5vTJZ5P/lynnsey-schneider-tb-TZc-LUqtrs-unsplash.jpg"
   },
   {
@@ -45,8 +45,8 @@
       "1 cup ricotta cheese",
       "1 cup shredded mozzarella cheese"
     ],
-    "preparing_time": "45 min",
-    "calories": "380 calories",
+    "preparing_time": 45,
+    "calories": 380,
     "recipe_image": "https://i.ibb.co/tchdkKN/vertical-view-fresh-delicious-vegan-salad-various-organic-vegetables-peppers.jpg"
   },
   {
@@ -61,8 +61,8 @@
       "Black pepper",
       "Red pepper flakes"
     ],
-    "preparing_time": "10 min",
-    "calories": "250 calories",
+    "preparing_time": 10,
+    "calories": 250,
     "recipe_image": "https://i.ibb.co/L8vqD6B/front-view-delicious-sandwiches-with-avocado-red-tomatoes-grey-background-lunch-snack-burger-sandwic.jpg"
   },
   {
@@ -80,8 +80,8 @@
       "1 tablespoon red wine vinegar",
       "1 teaspoon dried oregano"
     ],
-    "preparing_time": "15 min",
-    "calories": "180 calories",
+    "preparing_time": 15,
+    "calories": 180,
     "recipe_image": "https://i.ibb.co/PMz4RXt/top-view-vegetable-salad-with-chicken-slices-bread-green-table-food-meal-vegetables.jpg.jpg"
   },
   {
@@ -99,8 +99,8 @@
       "1/2 teaspoon salt",
       "1/2 teaspoon ground cinnamon"
     ],
-    "preparing_time": "50 min",
-    "calories": "200 calories",
+    "preparing_time": 50,
+    "calories": 200,
     "recipe_image": "https://i.ibb.co/pKS910Q/helena-yankovska-QXSvb-Dki-Jm-Y-unsplash.jpg.jpg"
   }
 ]

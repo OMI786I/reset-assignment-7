@@ -12,6 +12,7 @@ function App() {
   const [recipeList, setRecipeList] = useState([]);
   const [wantToCook, setWantToCook] = useState([]);
   const [id, setId] = useState(0);
+
   const addToRecipeList = (recipe) => {
     const isExist = recipeList.find(
       (reciped) => reciped.recipe_id == recipe.recipe_id
@@ -25,14 +26,24 @@ function App() {
   };
 
   const wantToCookFunc = (recipe, id) => {
+    let oldCalorie = 0;
     const WantToCookList = [...wantToCook, recipe];
     setWantToCook(WantToCookList);
     setId(id);
     const remainingList = recipeList.filter((list) => list.recipe_id !== id);
     setRecipeList(remainingList);
   };
-  console.log(wantToCook);
+  const calorie = wantToCook.map((cal) => cal.calories);
 
+  const sumCalorie = calorie.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  const time = wantToCook.map((time) => time.preparing_time);
+  const sumTime = time.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
   return (
     <>
       <Toaster />
@@ -56,6 +67,10 @@ function App() {
               wantToCookFunc={wantToCookFunc}
             ></RecipeList>
             <WantToCookComp wantToCook={wantToCook}></WantToCookComp>
+            <div className="flex justify-center gap-3 mt-8">
+              <h1>Total time : {sumTime}</h1>
+              <h1>Total calorie : {sumCalorie}</h1>
+            </div>
           </div>
         </div>
       </div>
