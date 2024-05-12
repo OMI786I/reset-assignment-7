@@ -6,7 +6,9 @@ const WantToCookComp = ({ wantToCook }) => {
     <div>
       <div>
         <div className="p-4">
-          <h1 className="text-2xl font-bold">Want to cook :</h1>
+          <h1 className="text-2xl font-bold">
+            Want to cook : {wantToCook.length}
+          </h1>
         </div>
         <hr></hr>
         <div>
@@ -14,7 +16,7 @@ const WantToCookComp = ({ wantToCook }) => {
             {/* head */}
             <thead>
               <tr>
-                <th></th>
+                <th>{}</th>
                 <th>Name</th>
                 <th>Time</th>
                 <th>Calories</th>

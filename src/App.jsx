@@ -11,7 +11,8 @@ import WantToCookComp from "./components/recipe/WantToCookComp";
 function App() {
   const [recipeList, setRecipeList] = useState([]);
   const [wantToCook, setWantToCook] = useState([]);
-  const addToRecipeList = (recipe) => {
+  const [id, setId] = useState(0);
+  const addToRecipeList = (recipe, id) => {
     const isExist = recipeList.find(
       (reciped) => reciped.recipe_id == recipe.recipe_id
     );
@@ -21,13 +22,17 @@ function App() {
     } else {
       toast.error("Already exists");
     }
+    console.log(id);
   };
 
-  const wantToCookFunc = (recipe) => {
+  const wantToCookFunc = (recipe, id) => {
     const WantToCookList = [...wantToCook, recipe];
     setWantToCook(WantToCookList);
+    setId(id);
   };
   console.log(wantToCook);
+  console.log(id);
+
   return (
     <>
       <Toaster />

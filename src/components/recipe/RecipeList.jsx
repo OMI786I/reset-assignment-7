@@ -1,6 +1,6 @@
 import RecipeListInner from "./RecipeListInner";
 
-const RecipeList = ({ recipeList, wantToCookFunc }) => {
+const RecipeList = ({ recipeList, wantToCookFunc, addToRecipeList }) => {
   let index = 1;
 
   return (
@@ -30,6 +30,7 @@ const RecipeList = ({ recipeList, wantToCookFunc }) => {
             list={list}
             index={index++}
             wantToCookFunc={wantToCookFunc}
+            addToRecipeList={addToRecipeList}
           ></RecipeListInner>
         ))}
       </div>
