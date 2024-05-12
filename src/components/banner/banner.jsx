@@ -14,9 +14,9 @@ const Banner = () => {
               Discover an exceptional cooking class tailored for you!
             </h1>
             <p className="mb-5">
-              Learn and Master Basic Programming, Data Structures, Algorithm,
-              OOP, Database and solve 500+ coding problems to become an
-              exceptionally well world-class Programmer
+              Join us on an exciting journey of cooking. Feel free to join us
+              and browse through website. You can find all the recipe you need
+              for your special dinner.
             </p>
             <button className="btn btn-accent mr-7">Explore Now</button>
             <button className="btn  btn-ghost border-white ">
