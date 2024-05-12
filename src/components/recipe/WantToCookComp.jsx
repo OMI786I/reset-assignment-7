@@ -1,6 +1,7 @@
 import WantToCookInner from "./WantToCookInner";
 
 const WantToCookComp = ({ wantToCook }) => {
+  let index = 1;
   return (
     <div>
       <div>
@@ -22,7 +23,11 @@ const WantToCookComp = ({ wantToCook }) => {
           </table>
 
           {wantToCook.map((list) => (
-            <WantToCookInner key={list.recipe_id} list={list}></WantToCookInner>
+            <WantToCookInner
+              key={list.recipe_id}
+              list={list}
+              index={index++}
+            ></WantToCookInner>
           ))}
         </div>
       </div>

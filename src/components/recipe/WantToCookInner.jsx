@@ -1,4 +1,4 @@
-const WantToCookInner = ({ list }) => {
+const WantToCookInner = ({ list, index }) => {
   const { recipe_name, preparing_time, calories, recipe_id } = list;
   return (
     <div>
@@ -7,7 +7,7 @@ const WantToCookInner = ({ list }) => {
           <table className="table">
             <tbody>
               <tr>
-                <th>{}</th>
+                <th>{index}</th>
                 <td>{recipe_name}</td>
                 <td>{preparing_time}</td>
                 <td>{calories}</td>
